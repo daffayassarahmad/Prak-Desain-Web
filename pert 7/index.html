@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Aplikasi Buku Favorit</title>
+  </head>
+  <body class="bg-slate-300 p-10 font-sans">
+    <!-- Heading -->
+    <h1 class="text-4xl font-bold text-center text-gray-800 mb-10">Aplikasi Buku Favorit</h1>
+
+    <!-- Input Nama Pengguna -->
+    <div class="mb-10">
+      <div class="flex justify-center items-center mb-4">
+        <input class="p-2 text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400" type="text" id="namaPengguna" placeholder="Masukkan Nama Anda" />
+        <button class="ml-2 bg-blue-500 text-white px-5 py-3 rounded-lg hover:bg-blue-600 transition duration-300" id="btnSimpanNama">Simpan Nama</button>
+      </div>
+      <h3 id="salamPengguna" class="text-center text-xl font-semibold text-gray-700"></h3>
+    </div>
+
+    <!-- Form Tambah Buku -->
+    <form class="mb-10 mx-auto w-full max-w-xl" id="form-tambah-buku">
+      <div class="flex flex-col space-y-4">
+        <input class="p-4 text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400" type="text" id="judul" placeholder="Judul Buku" required />
+        <input class="p-4 text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400" type="text" id="penulis" placeholder="Penulis" required />
+        <input class="p-4 text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400" type="number" id="tahun" placeholder="Tahun Terbit" required />
+        <button type="submit" class="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition duration-300">Tambah Buku</button>
+      </div>
+    </form>
+
+    <!-- Daftar Buku -->
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Daftar Buku</h2>
+    <div id="daftar-buku" class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20"></div>
+
+    <!-- Buku Favorit -->
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Buku Favorit</h2>
+    <div id="buku-favorit" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
